@@ -10,15 +10,30 @@
     <main class="container">
         <div class="row">
             <div class="col-md-12 col-sm-9 container text-center mt-4" id="container">
-                <div class="card mb-3 p-4">
-                    <h2 class="card-title mb-4 py-3">
-                        Lorem ipsum dolor sit amet.
+                <div class="card mb-3 ">
+                    <h2 class="card-title my-3 ">
+                        The Elephant's Trunk Nebula in Cepheus
                    </h2>
-                    <img src="https://apod.nasa.gov/apod/image/2008/IC1396_Chad_Leader1208.jpg" class="card-img-top" alt="">
-                       
+                    <img src="https://apod.nasa.gov/apod/image/2008/IC1396_Chad_Leader1208.jpg" class="img-fluid card-img-top" alt="">
+                       <div class="card-body">
+                           <p class="card-text">Like an illustration in a galactic Just So Story, the Elephant's Trunk Nebula winds through the emission nebula and young star cluster complex IC 1396, in the high and far off constellation of Cepheus. Also known as vdB 142, the cosmic elephant's trunk is over 20 light-years long. This detailed close-up view was recorded through narrow band filters that transmit the light from ionized hydrogen and oxygen atoms in the region.  The resulting composite highlights the bright swept-back ridges that outline pockets of cool interstellar dust and gas. Such embedded, dark, tendril-shaped clouds contain the raw material for star formation and hide protostars within. Nearly 3,000 light-years distant, the relatively faint IC 1396 complex covers a large region on the sky, spanning over 5 degrees. This dramatic scene spans a 1 degree wide field of view though, about the size of 2 Full Moons.  Mars 2020 Launch: photos from planet Earth</p>
+                       </div>
+                       <div class="card-text text-right p-1 d-flex justify-content-between">
+                            <small class="text-muted p-1">Fecha: 2020-01-08</small> 
+                           <small class="text-muted p-1">Autor: Chad Leader.</small> 
+                       </div>
                 </div>
             </div>
         </div>
     </main>
 </body>
 </html>
+
+<script>
+    let fecha = new Date().toLocaleDateString('en-AU')
+    const day = fecha.substr(0,2)
+    const month = fecha.substr(3,2)
+    const year = fecha.substr(6,2)
+    const date = year+month+day
+    console.log(date)
+</script>
