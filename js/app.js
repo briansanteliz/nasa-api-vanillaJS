@@ -1,12 +1,18 @@
-import Api from './api.js'
+import {Api} from './Api.js'
+import {Ui} from './Ui.js'
 const container = document.getElementById('container')
 const api = new Api()
+const ui = new Ui()
 
-window.addEventListener('load', async()=>{
+document.addEventListener('DOMContentLoaded', async()=>{
    const data = await api.Query()
-       let html = `
-       <img src="${data.url}" alt="${data.title}">
-       
-       `;
-       container.innerHTML = html;
+   ui.Template(data,container)
+      
+})
+const dateInput = document.getElementById('fecha');
+const form = document.getElementById('form')
+form.addEventListener('submit', (e)=>{
+    console.log(dateInput.value)
+    form.reset()
+    e.preventDefault()
 })

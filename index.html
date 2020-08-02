@@ -6,11 +6,14 @@
     <title>Nasa Api | Vanilla JS</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
 </head>
-<body>
+<body style="background:#F4F6FF">
+    <nav class="navbar navbar-dark bg-dark d-flex justify-content-center">
+        <h1 class="navbar-brand mb-0 display-1">Astronomy Picture of the Day</h1>
+      </nav>
     <main class="container">
         <div class="row">
             <div class="col-md-12 col-sm-9 container text-center mt-4" id="container">
-                <div class="card mb-3 ">
+                <!-- <div class="card mb-3 ">
                     <h2 class="card-title my-3 ">
                         The Elephant's Trunk Nebula in Cepheus
                    </h2>
@@ -22,18 +25,36 @@
                             <small class="text-muted p-1">Fecha: 2020-01-08</small> 
                            <small class="text-muted p-1">Autor: Chad Leader.</small> 
                        </div>
-                </div>
+                </div> -->
+               
             </div>
+          
+                <form class="col-sm-5 col-md-6 form-group mx-auto mt-5" id="form">
+                    <label for="fecha">Publicaciones anteriores:</label>
+                    <input type="date" name="" id="fecha" max="2020" class="form-control" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required>   
+                    <div class="form-group">
+                        <button class="form-control mt-3 btn btn-info">Obtener</button> 
+                    </div>                
+                </form>
+            
         </div>
     </main>
+    <script src="./js//app.js" type="module"></script>
+    
 </body>
 </html>
 
 <script>
+    //obtener el año mes y dia sepatado
+    const objet = new Date()
     let fecha = new Date().toLocaleDateString('en-AU')
     const day = fecha.substr(0,2)
     const month = fecha.substr(3,2)
     const year = fecha.substr(6,2)
     const date = year+month+day
-    console.log(date)
+
+    //para obtener publicaciones anteriores puede usarse el input date o
+    // probar con el enlace que tenga el dia anterior del objeto New date , sino entonces dejarlo asi y enforcarse en el dieño y la porcion de l imagen 
+    //probar como la api obtiene publicaciones anteriores
+   
 </script>
