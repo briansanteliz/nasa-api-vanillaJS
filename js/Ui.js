@@ -1,9 +1,20 @@
 export class Ui{
     Template(data, contenedor){
+        if(data.msg){
+            const alerta = document.createElement('div')
+            alerta.className = 'alert alert-danger'
+            alerta.innerText = `${data.msg}`
+            const alertContainer = document.getElementById('alert').appendChild(alerta)
+           setTimeout(()=>{
+            alertContainer.remove()
+           },2000)
+            return
+        }       
+        
         let html = `
             <div class="shadow-lg  mb-4 bg-white rounded card mb-3 ">
                     
-                    <img src="${data.url}" class="img-fluid card-img-top" alt="${data.title}">
+                    <img src="${data.url}" class="img-fluid card-img-top" alt="${data.title}" >
                    
                        <div class="card-body" style="background:#212121; color:#dadada;">
                        <h2 class="card-title my-3 ">
@@ -21,4 +32,4 @@ export class Ui{
         `;
         contenedor.innerHTML = html;
     }
-}
+   }
