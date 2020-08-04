@@ -37,8 +37,9 @@ export class Ui{
 
        this.Spinner('block')
         setTimeout(()=>{
-
             contenedor.innerHTML = html;
+    contenedor.classList.add('animate__animated', 'animate__backInDown')
+
             this.Spinner('none')
 
         },4000)
@@ -49,4 +50,5 @@ export class Ui{
         spinner.style.display = `${vista}`
         
     }
+    
    }

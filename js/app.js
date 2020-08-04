@@ -5,6 +5,7 @@ const form = document.getElementById("form");
 const year = document.getElementById("year");
 
 const container = document.getElementById("container");
+
 const api = new Api();
 const ui = new Ui();
 
@@ -20,8 +21,6 @@ form.addEventListener("submit", async (e) => {
   e.preventDefault();
   const query = await api.Search(dateInput.value);
 
-
-    ui.Template(query, container);
-
+  ui.Template(query, container);
   form.reset();
 });

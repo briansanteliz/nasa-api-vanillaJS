@@ -1,125 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nasa Api | Vanilla JS</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+  />
+    <link rel="stylesheet" href="./css/custom.css">
 
-</head>
-<body style="background:#F4F6FF">
+
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    >
+  </head>
+  <body style="background: #f4f6ff;">
     <nav class="navbar navbar-dark bg-dark d-flex justify-content-center">
-        <h1 class="navbar-brand mb-0 display-1">Astronomy Picture of the Day</h1>
-      </nav>
+      <h1 class="navbar-brand mb-0 display-1">Astronomy Picture of the Day</h1>
+    </nav>
     <main class="container">
-        <div class="spinner" id="spinner" class="container mx-auto">
-                <div class="rect1"></div>
-                <div class="rect2"></div>
-                <div class="rect3"></div>
-                <div class="rect4"></div>
-                <div class="rect5"></div>
-              </div>
-        <div class="row">
-            
-            <div class="col-md-12 col-sm-9 container text-center mt-4" id="container">
-                
-               
-            </div>
-            
-                <form class="col-sm-5 col-md-6 form-group mx-auto mt-5" id="form">
-                    <label for="fecha">Publicaciones anteriores:</label>
-                    <input type="date" name="" id="fecha" max="2020" class="form-control" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required>   
-                    <div class="form-group">
-                        <button class="form-control mt-3 btn btn-info"> <i class="fas fa-arrow"></i> Get Now!</button> 
-                    </div>                
-                </form>
-                <div id="alert" class="container text-center"></div>
-            
-        </div>
+      <div class="spinner" id="spinner" class="container mx-auto">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+      </div>
+      <div class="row">
+        <div
+          class="col-md-12 col-sm-9 container text-center mt-4 "
+          id="container" 
+        ></div>
+
+        <form class="col-sm-5 col-md-6 form-group mx-auto mt-5" id="form">
+          <label for="fecha">Previous publications:</label>
+          <input
+            type="date"
+            name=""
+            id="fecha"
+            max="2020"
+            class="form-control"
+            pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
+            required
+          >
+          <div class="form-group">
+            <button class="form-control mt-3 btn btn-info">
+              <i class="fas fa-arrow-circle-left"></i> Get Now!
+            </button>
+          </div>
+        </form>
+        <div id="alert" class="container text-center"></div>
+      </div>
     </main>
-    <footer  class=" navbar w-100 text-white  bg-dark  ">
-       <div class="container p-3  d-flex justify-content-between  ">
-            <span> <a href="https://github.com/Brian-Santeliz" target="_blank">Github</a> <i class="fab fa-github 5x"></i></span>
-        <span>Develeopment By <a href="" class="text white">Brian Santeliz</a> &copy <span id="year"></span> </span>
-        <small class="text-center">See tomorrow to other picture! :)</small>
-
-    </div>
-           
-             
-       </div>
+    <footer class="navbar w-100 text-white bg-dark">
+      <section class="container p-3 d-flex justify-content-between contenedor-footer">
+            <small class="text-center">come tomorrow for another post! :)</small>
+        <span>
+          <a
+            class="text-white"
+            href="https://github.com/Brian-Santeliz"
+            target="_blank"
+            >Github</a
+          >
+          <i class="fab fa-github 5x"></i
+        ></span>
+        <span
+          >Development By Brian Santeliz &copy <span id="year"></span>
+        </span>
+      </section>
     </footer>
-    <script src="./js//app.js" type="module"></script>
-    
-</body>
-<style>
-    .spinner {
-  margin: 100px auto;
-  width: 50px;
-  height: 40px;
-  text-align: center;
-  font-size: 10px;
-display:none
-}
-
-.spinner > div {
-  background-color: #333;
-  height: 100%;
-  width: 6px;
-  display: inline-block;
+    <script src="./js/app.js" type="module"></script>
+  </body>
   
-  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
-  animation: sk-stretchdelay 1.2s infinite ease-in-out;
-}
-
-.spinner .rect2 {
-  -webkit-animation-delay: -1.1s;
-  animation-delay: -1.1s;
-}
-
-.spinner .rect3 {
-  -webkit-animation-delay: -1.0s;
-  animation-delay: -1.0s;
-}
-
-.spinner .rect4 {
-  -webkit-animation-delay: -0.9s;
-  animation-delay: -0.9s;
-}
-
-.spinner .rect5 {
-  -webkit-animation-delay: -0.8s;
-  animation-delay: -0.8s;
-}
-
-@-webkit-keyframes sk-stretchdelay {
-  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
-  20% { -webkit-transform: scaleY(1.0) }
-}
-
-@keyframes sk-stretchdelay {
-  0%, 40%, 100% { 
-    transform: scaleY(0.4);
-    -webkit-transform: scaleY(0.4);
-  }  20% { 
-    transform: scaleY(1.0);
-    -webkit-transform: scaleY(1.0);
-  }
-}
-</style>
 </html>
-
-<script>
-    //obtener el año mes y dia sepatado
-    const objet = new Date()
-    let fecha = new Date().toLocaleDateString('en-AU')
-    const day = fecha.substr(0,2)
-    const month = fecha.substr(3,2)
-    const year = fecha.substr(6,2)
-    const date = year+month+day
-
-    //para obtener publicaciones anteriores puede usarse el input date o
-    // probar con el enlace que tenga el dia anterior del objeto New date , sino entonces dejarlo asi y enforcarse en el dieño y la porcion de l imagen 
-    //probar como la api obtiene publicaciones anteriores
-   
-</script>
