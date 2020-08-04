@@ -19,6 +19,9 @@ const dateInput = document.getElementById("fecha");
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
   const query = await api.Search(dateInput.value);
-  ui.Template(query, container);
+
+
+    ui.Template(query, container);
+
   form.reset();
 });

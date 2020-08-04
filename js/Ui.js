@@ -1,6 +1,7 @@
 export class Ui{
     Template(data, contenedor){
         if(data.msg){
+            this.Spinner('none')
             const alerta = document.createElement('div')
             alerta.className = 'alert alert-danger'
             alerta.innerText = `${data.msg}`
@@ -9,8 +10,11 @@ export class Ui{
             alertContainer.remove()
            },2000)
             return
-        }       
-        
+        }      
+        const documet = document.querySelector('#container > div')
+        if(documet){
+            documet.remove()
+        }
         let html = `
             <div class="shadow-lg  mb-4 bg-white rounded card mb-3 ">
                     
@@ -30,6 +34,19 @@ export class Ui{
                        
                 </div>
         `;
-        contenedor.innerHTML = html;
+
+       this.Spinner('block')
+        setTimeout(()=>{
+
+            contenedor.innerHTML = html;
+            this.Spinner('none')
+
+        },4000)
+           
+    }
+    Spinner(vista){
+        const spinner = document.getElementById('spinner')
+        spinner.style.display = `${vista}`
+        
     }
    }
