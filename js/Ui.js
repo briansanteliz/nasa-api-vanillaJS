@@ -18,17 +18,17 @@ export class Ui {
       documet.remove();
     }
     let html = `
-            <div class="shadow-lg  mb-4 bg-white rounded card mb-3 ">
+            <div class="shadow-lg  mb-4 bg-white rounded card mb-3 animate__animated animate__zoomIn">
                     
                     <img src="${
                       data.url
                     }" class="img-fluid card-img-top" alt="${data.title}" >
                    
                        <div class="card-body" style="background:#212121; color:#dadada;">
-                       <h2 class="card-title my-3 ">
+                       <h2 class="card-title my-3 title">
                        ${data.title}
                   </h2>
-                           <p class="card-text">${data.explanation}</p>
+                           <p class="animate__animated animate__backInDown card-text line">${data.explanation}</p>
                        
                            <div class="card-text text-right p-1 d-flex justify-content-between">
                            <small class="p-1" style="color:#bfbfbf !important">Fecha: ${

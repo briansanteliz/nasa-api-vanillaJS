@@ -68,3 +68,10 @@
   margin: auto;
   }
 }
+.title{
+  font-family: 'Raleway', sans-serif;
+}
+
+.line{
+  line-height:1.9em;
+}
