@@ -28,7 +28,9 @@ export class Ui {
                        <h2 class="card-title my-3 title">
                        ${data.title}
                   </h2>
-                           <p class="animate__animated animate__backInDown card-text line">${data.explanation}</p>
+                           <p class="animate__animated animate__backInDown card-text line">${
+                             data.explanation
+                           }</p>
                        
                            <div class="card-text text-right p-1 d-flex justify-content-between">
                            <small class="p-1" style="color:#bfbfbf !important">Fecha: ${
