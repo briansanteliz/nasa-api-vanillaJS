@@ -33,10 +33,10 @@ export class Ui {
                            }</p>
                        
                            <div class="card-text text-right p-1 d-flex justify-content-between">
-                           <small class="p-1" style="color:#bfbfbf !important">Fecha: ${
+                           <small class="p-1" style="color:#bfbfbf !important">Date: ${
                              data.date
                            }</small> 
-                          <small class="p-1" style="color:#bfbfbf !important">Autor: ${
+                          <small class="p-1" style="color:#bfbfbf !important">Author: ${
                             data.copyright
                               ? data.copyright.substring(0, 13)
                               : "NASA"
