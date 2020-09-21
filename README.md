@@ -15,5 +15,5 @@ App: https://brian-santeliz.github.io/nasa-api-vanillaJS/
 ![APOD](./docs/1.png)
 
 ---
-Responsive:
+
 ![APOD](./docs/2.png)
