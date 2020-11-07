@@ -76,3 +76,9 @@
   line-height: 1.9em;
   font-family: "Crimson Text", serif;
 }
+@media screen and ( max-width:770px){
+
+  .facebook-container{
+    width: 300px;
+  }
+}
